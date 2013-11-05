@@ -18,10 +18,6 @@ macro curry(f)
         lambda = :($a -> $lambda)
     end
 
-    println("name: $(funcname)")
-    println("arg1: $(declaration[2])")
-    println("body: $(lambda)")
-
     # Declare function
     quote
         $(esc(quote
