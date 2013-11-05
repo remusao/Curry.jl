@@ -1,3 +1,15 @@
 # Curry
 
-[![Build Status](https://travis-ci.org/remusao/Curry.jl.png)](https://travis-ci.org/remusao/Curry.jl)
+```julia
+using Curry
+
+@curry function f(x, y, z)
+    x + y + z
+end
+
+a = f(42)
+b = a(42)
+c = b(42)
+
+# Result => 42 + 42 + 42 = 126
+```
